@@ -35,3 +35,19 @@ $router->put("/blog", function() {
   echo 'And this, can be for insert a new post';
 }
 ````
+
+And a .htaccess like
+```
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+
+    RewriteEngine On
+    #RewriteBase /path/to/app
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteRule ^ index.php [QSA,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ index.php [L]
+</IfModule>
+```
