@@ -12,7 +12,7 @@ You can use with something like
 $router = new Route66();
 
 $router->get("/", function() {
-  echo 'That's the index';
+  echo 'That\'s the index';
 });
 
 $router->get("/blog", function() {
