@@ -32,6 +32,14 @@ class Route66 {
        $this->resolve($pattern, $function, "post");
     }
     
+    function put($pattern, $function) {
+       $this->resolve($pattern, $function, "put");
+    }
+    
+    function delete($pattern, $function) {
+       $this->resolve($pattern, $function, "delete");
+    }
+    
     function resolve($pattern, $function, $method) {
        if(!$this->isMethod($method)) return false;
        $parsed_route = $this->parse($pattern);
