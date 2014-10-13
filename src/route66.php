@@ -67,7 +67,7 @@ class Route66 {
     }
     
     function isMethod($method) {
-        return (strtoupper($_SERVER['REQUEST_METHOD']) == strtoupper($method)) || (strtoupper($_SERVER['REQUEST_METHOD']) == "POST" && strtoupper($_POST['_mehtod']) == strtoupper($method) );
+        return (strtoupper($_SERVER['REQUEST_METHOD']) == strtoupper($method)) || (strtoupper($_SERVER['REQUEST_METHOD']) == "POST" && strtoupper($_POST['_method']) == strtoupper($method) );
     }
     
 }
