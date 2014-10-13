@@ -36,6 +36,10 @@ $router->put("/blog", function() {
 }
 ````
 
+### Put & Delete
+
+Now, if your browser doen's accept these methods, you can do it with a POST, and set the variable _method to PUT or DELETE
+
 And a .htaccess like
 ```
 <IfModule mod_rewrite.c>
