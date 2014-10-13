@@ -47,3 +47,7 @@ Y un .htaccess como este
     RewriteRule ^(.*)$ index.php [L]
 </IfModule>
 ```
+
+### Put & Delete
+
+Si el navegador no soporta los métodos `PUT` y `DELETE`, puedes hacerlo con `POST`, y añadiendo la variable `_method` como PUT o `DELETE`
