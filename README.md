@@ -50,4 +50,4 @@ And a .htaccess like
 
 ### Put & Delete
 
-Now, if your browser doen's accept these methods, you can do it with a POST, and set the variable _method to PUT or DELETE
+Now, if your browser doen's accept these methods, you can do it with a `POST`, and set the variable `_method` to `PUT` or `DELETE`
