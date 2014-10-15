@@ -36,17 +36,6 @@ $router->put("/blog", function() {
 });
 ````
 
-####Alternative usage
-
-You can use without anonymous functions:
-```php
-$router = new Route66();
-
-$router->get("/", "Views::Index"); //Calls the Views class, Method Index
-//OR
-$router->get("/", "viewsIndex"); //Calls the function viewsIndex
-```
-
 And a .htaccess like
 ```
 <IfModule mod_rewrite.c>
@@ -57,6 +46,17 @@ And a .htaccess like
 
     RewriteRule ^(.*)$ index.php [L]
 </IfModule>
+```
+
+####Alternative usage
+
+You can use without anonymous functions:
+```php
+$router = new Route66();
+
+$router->get("/", "Views::Index"); //Calls the Views class, Method Index
+//OR
+$router->get("/", "viewsIndex"); //Calls the function viewsIndex
 ```
 
 ### Put & Delete
