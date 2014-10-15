@@ -48,6 +48,17 @@ Y un .htaccess como este
 </IfModule>
 ```
 
+####Uso Alternativo
+
+Puedes utilizar el router sin usar funciones anónimas
+```php
+$router = new Route66();
+
+$router->get("/", "Views::Index"); //Llama a la clase Views, al método estático Index
+//OR
+$router->get("/", "viewsIndex"); //Llama a la función viewsIndex
+```
+
 ### Put & Delete
 
 Si el navegador no soporta los métodos `PUT` y `DELETE`, puedes hacerlo con `POST`, y añadiendo la variable `_method` como PUT o `DELETE`
