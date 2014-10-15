@@ -5,9 +5,7 @@ class Route66 {
     private $_vars = array();
 
     public function parse($route) {
-        if (!preg_match_all(
-            self::DEFAULT_REGEX, $route, $matches
-        )) {
+        if (!preg_match_all(self::DEFAULT_REGEX, $route, $matches)) {
             return $route;
         }
         
