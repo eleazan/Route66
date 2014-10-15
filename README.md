@@ -17,11 +17,11 @@ $router->get("/", function() {
 
 $router->get("/blog", function() {
   echo 'Show the blog page';
-}
+});
 
 $router->get("/blog/{post_id}", function($post_id) {
   echo 'Show the post: '.$post_id;
-}
+});
 
 $router->post("/blog/{post_id}", function($post_id) {
   echo 'Now, we can modify the post: '.$post_id
@@ -33,7 +33,7 @@ $router->delete("/blog/{post_id}", function($post_id) {
 
 $router->put("/blog", function() {
   echo 'And this, can be for insert a new post';
-}
+});
 ````
 
 And a .htaccess like
