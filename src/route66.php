@@ -23,19 +23,19 @@ class Route66 {
     }
 
     function get($pattern, $function) {
-       $this->resolve($pattern, $function, "get");
+       return $this->resolve($pattern, $function, "get");
     }
     
     function post($pattern, $function) {
-       $this->resolve($pattern, $function, "post");
+       return $this->resolve($pattern, $function, "post");
     }
     
     function put($pattern, $function) {
-       $this->resolve($pattern, $function, "put");
+       return $this->resolve($pattern, $function, "put");
     }
     
     function delete($pattern, $function) {
-       $this->resolve($pattern, $function, "delete");
+       return $this->resolve($pattern, $function, "delete");
     }
     
     function resolve($pattern, $function, $method) {
@@ -44,7 +44,7 @@ class Route66 {
        $URI = $_SERVER['REQUEST_URI'];
 
        if($this->checkRoute($parsed_route)) {
-           call_user_func_array($function, $this->_vars);
+           return call_user_func_array($function, $this->_vars);
        }
         
     }
