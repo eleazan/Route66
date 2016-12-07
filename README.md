@@ -59,6 +59,13 @@ $router->get("/", "Views::Index"); //Calls the Views class, Method Index
 $router->get("/", "viewsIndex"); //Calls the function viewsIndex
 ```
 
+### Path
+
+If you are using a path, you can use ```setPath()``` for avoid conflicts
+```php
+$router->setPath("/api");
+```
+
 ### Put & Delete
 
-Now, if your browser doesn't accept these methods, you can do it with a `POST`, and set the variable `_method` to `PUT` or `DELETE`
+If your browser doesn't accept these methods, you can do it with a `POST`, and set the variable `_method` to `PUT` or `DELETE`
