@@ -3,8 +3,18 @@
 class Route66 {
     const DEFAULT_REGEX = "@((?<!/)/[^/?#]+)|/@";
     private $_vars = array();
+    private $path = false;
 
     public function parse($route) {
+        
+        if($this->path) {
+            //Only when path is set
+            $pos = strpos($route, $this->path);
+            if($pos === 0) {
+                $route = str_replace($this->path, "", $route);
+            }
+        }
+        
         if (!preg_match_all(self::DEFAULT_REGEX, $route, $matches)) {
             return $route;
         }
@@ -17,6 +27,9 @@ class Route66 {
         }
         
         return $routeData;
+    }
+    function setPath($path) {
+        $this->path = $path;
     }
     function isVariable($match) {
         return preg_match('|^/{.*}|', $match);
