@@ -59,9 +59,9 @@ $router->get("/", "Views::Index"); //Calls the Views class, Method Index
 $router->get("/", "viewsIndex"); //Calls the function viewsIndex
 ```
 
-### Path
+### Subdirectory
 
-If you are using a path, you can use ```setPath()``` for avoid conflicts
+If you are using a subdirectory, you can use ```setPath()``` for avoid conflicts
 ```php
 $router->setPath("/api");
 ```
